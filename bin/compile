@@ -17,6 +17,9 @@ begin
       end
     end
   end
+
+  compile_java_path = File.join(File.dirname(__FILE__), 'compile_java')
+  system(compile_java_path, *ARGV)
 rescue Exception => e
   Kernel.puts " !"
   e.message.split("\n").each do |line|
